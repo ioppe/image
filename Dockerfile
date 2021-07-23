@@ -1,4 +1,4 @@
-FROM redis:v4.0.1
+FROM redis:4.0.1
 RUN apt -y update
 RUN mv /etc/apt/sources.list /etc/apt/apt/source.list.bak
 RUN cat > /etc/apt/sources.list <<EOF
