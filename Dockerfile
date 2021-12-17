@@ -1,6 +1,6 @@
 FROM redis:4.0.1
 RUN apt -y update && apt -y install wget curl gnupg gnupg2
-RUN wget http://download.redis.io/releases/redis-4.0.1.tar.gz \
+RUN cd /usr/local && wget http://download.redis.io/releases/redis-4.0.1.tar.gz \
     && tar xvf redis-4.0.1.tar.gz
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg2 --import - \
     && curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import - \
