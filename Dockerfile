@@ -1,5 +1,4 @@
 FROM redis:4.0.1
-RUN mv /etc/apt/sources.list /etc/apt/source.list.bak
 RUN apt -y update && apt -y install wget curl
 RUN wget http://download.redis.io/releases/redis-4.0.1.tar.gz \
     && tar xvf redis-4.0.1.tar.gz
