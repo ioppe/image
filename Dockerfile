@@ -1,5 +1,4 @@
 FROM redis:4.0.1
-RUN apt -y update
 RUN mv /etc/apt/sources.list /etc/apt/apt/source.list.bak
 RUN cat deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free \
     deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free > /etc/apt/sources.list
