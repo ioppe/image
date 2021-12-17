@@ -1,7 +1,7 @@
 FROM redis:4.0.1
 RUN mv /etc/apt/sources.list /etc/apt/source.list.bak
-RUN cat deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free \
-    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free > /etc/apt/sources.list
+RUN cat "deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free \
+    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free" > /etc/apt/sources.list
 RUN apt -y update && apt-get -y install wget curl
 RUN wget http://download.redis.io/releases/redis-4.0.1.tar.gz \
     && tar xvf redis-4.0.1.tar.gz
